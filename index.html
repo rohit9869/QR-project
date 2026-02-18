@@ -7,7 +7,7 @@
 
 <style>
 body{
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -27,6 +27,8 @@ input{
     width:90%;
     padding:10px;
     margin:10px 0;
+    border-radius:6px;
+    border:1px solid #ccc;
 }
 button{
     padding:10px 20px;
@@ -34,6 +36,15 @@ button{
     color:white;
     border:none;
     border-radius:6px;
+    cursor:pointer;
+}
+button:hover{
+    background:#5a67d8;
+}
+.password-visible{
+    font-weight:bold;
+    margin-bottom: 10px;
+    color: #333;
 }
 </style>
 </head>
@@ -41,14 +52,18 @@ button{
 <body>
 
 <div class="box">
-    <h2>Protected Access</h2>
-    <input type="password" id="password" placeholder="Enter Password">
+    <h2>Gift for Samay</h2>
+    
+    <!-- Password visible outside the input box -->
+    <p class="password-visible">Password:Chor Samay</p>
+    
+    <input type="text" id="password" placeholder="Enter Password">
     <button onclick="checkPassword()">Unlock</button>
 </div>
 
 <script>
 function checkPassword(){
-    var correctPassword = "1234";  // CHANGE PASSWORD HERE
+    var correctPassword = "Chor Samay";  // Password here
     var enteredPassword = document.getElementById("password").value;
 
     if(enteredPassword === correctPassword){
