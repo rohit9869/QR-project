@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enter Password</title>
+
+<style>
+body{
+    font-family: Arial;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background: linear-gradient(135deg,#667eea,#764ba2);
+    margin:0;
+}
+.box{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    text-align:center;
+    width:90%;
+    max-width:350px;
+}
+input{
+    width:90%;
+    padding:10px;
+    margin:10px 0;
+}
+button{
+    padding:10px 20px;
+    background:#667eea;
+    color:white;
+    border:none;
+    border-radius:6px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>Protected Access</h2>
+    <input type="password" id="password" placeholder="Enter Password">
+    <button onclick="checkPassword()">Unlock</button>
+</div>
+
+<script>
+function checkPassword(){
+    var correctPassword = "1234";  // CHANGE PASSWORD HERE
+    var enteredPassword = document.getElementById("password").value;
+
+    if(enteredPassword === correctPassword){
+        window.location.href = "content.html";
+    } else {
+        alert("Wrong Password!");
+    }
+}
+</script>
+
+</body>
+</html>
